@@ -3,10 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>to-read</title>
+    <title>to-buy</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
 <body>
+    <header class="header">
+        <div class="container">
+            <div class="logo"></div>
+            <div class="button">Home</div>
+            <div class="button">Search</div>
+        </div>   
+    </header>
+
+    <main class="maincontainer">
+        <button class="add button">
+            <!-- <svg enable-background="new 0 0 50 50" height="50px" id="Layer_1" version="1.1" viewBox="0 0 50 50" width="50px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <rect fill="none" height="50" width="50"/>
+                <line fill="none" stroke="#000000" stroke-miterlimit="10" stroke-width="4" x1="9" x2="41" y1="25" y2="25"/>
+                <line fill="none" stroke="#000000" stroke-miterlimit="10" stroke-width="4" x1="25" x2="25" y1="9" y2="41"/>
+              </svg> -->
+            <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <style>.cls-1{fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}</style>
+                </defs>
+                <title/>
+                <g id="plus">
+                    <line class="cls-1" x1="16" x2="16" y1="7" y2="25"/>
+                    <line class="cls-1" x1="7" x2="25" y1="16" y2="16"/>
+                </g>
+            </svg>
+        </button>
+
+
+        <form id="form">
+                <fieldset>
+                    <legend>Product Details</legend>
+                    <div>
+                        <label for="name">Name of product: </label>
+                        <input type="text" id="name" name="name">
+                    </div>
+                    
+                    <div>
+                        <label for="brand">Brand: </label>
+                        <input type="text" id="brand" name="brand">
+                    </div>
+        
+                    <div>
+                        <label for="price">Price: </label>
+                        <input type="number" id="price" name="price">
+                    </div>
+        
+                    <div>
+                        <label for="type">Type of product: </label>
+                        <select name="type" id="type">
+                            <option value="body">Body care</option>
+                            <option value="facial">Facial</option>
+                            <option value="hair">Hair care</option>
+                        </select>
+                    </div>
+        
+        
+                    <button type="submit" type="reset" class="submit">Add to cart</button>
+          
+                </fieldset>
+        </form>
+         
+    </main>
+
+    <footer></footer>
 
 
     <script src="script.js"></script> 
