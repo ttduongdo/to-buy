@@ -83,7 +83,6 @@ body {
 }
 
 #form {
-    display: none;
     flex-direction: column;
     align-items: left;
     height: auto;

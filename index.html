@@ -37,9 +37,8 @@
             </svg>
         </button>
 
-
-        <form id="form">
-                <fieldset>
+        <dialog id="dialog" >
+            <form id="form">
                     <legend>Product Details</legend>
                     <div>
                         <label for="name">Name of product: </label>
@@ -64,12 +63,16 @@
                             <option value="hair">Hair care</option>
                         </select>
                     </div>
-        
-        
-                    <button type="submit" type="reset" class="submit">Add to cart</button>
+
+                    <div>
+                        <button value="cancel" formmethod="dialog">Cancel</button>
+                        <button type="submit" class="submit">Add to cart</button>
+                    </div>
+                    
           
-                </fieldset>
-        </form>
+    
+            </form>
+        </dialog>
          
     </main>
 

@@ -6,6 +6,7 @@ const submitButton = document.querySelector(".submit");
 const addButton = document.querySelector(".add");
 
 const form = document.querySelector("#form");
+const dialog = document.querySelector('#dialog');
 
 
 function Item(name, brand, price, type) {
@@ -38,11 +39,11 @@ function display(name, brand, price, type){
 
 
 addButton.addEventListener("click", () => {
-    form.style.display = "flex";
+    dialog.showModal();
 })
 
 
-form.addEventListener('submit', (e) => {
+dialog.addEventListener('submit', (e) => {
     e.preventDefault();
 
     const name = document.querySelector("#name").value;
@@ -59,3 +60,11 @@ form.addEventListener('submit', (e) => {
     form.style.display = "none";
 });
 
+dialog.addEventListener('cancel', () => {
+    dialog.close();
+})
+
+submit.addEventListener("click", (event) => {
+    event.preventDefault();
+    dialog.close(); 
+  });
