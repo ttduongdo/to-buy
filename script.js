@@ -16,25 +16,23 @@ function Item(name, brand, price, type) {
     this.type = type;
 }
 
+Item.prototype.toString = function() {
+    return `Name: ${this.name}
+    Brand: ${this.brand}
+    Price: $${this.price}
+    Type: ${this.type}`
+}
+
 function addItemToCart(item){
     cart.push(item);
 }
 
-function display(name, brand, price, type){
+function display(item){
     const box = document.createElement("div");
     mainContainer.appendChild(box);
     box.classList.add("box", "add");
-    box.innerText = 
-    `Name: ${name}
-    Brand: ${brand}
-    Price: $${price}
-    Type: ${type}`;
-    
+    box.innerText = item.toString();
 
-
-    for (let i = 0; i<cart.length; i++){
-        console.log(cart[i]);
-    }
 }
 
 
@@ -43,7 +41,7 @@ addButton.addEventListener("click", () => {
 })
 
 
-dialog.addEventListener('submit', (e) => {
+form.addEventListener('submit', (e) => {
     e.preventDefault();
 
     const name = document.querySelector("#name").value;
@@ -54,17 +52,14 @@ dialog.addEventListener('submit', (e) => {
 
     const newItem = new Item(name, brand, price, type);
     addItemToCart(newItem);
-    display(name, brand, price, type);
+    display(newItem);
 
-    form.innerHTML = form.innerHTML;
-    form.style.display = "none";
+    // form.innerHTML = form.innerHTML;
+    // form.style.display = "none";
+    dialog.close();
 });
 
-dialog.addEventListener('cancel', () => {
+const cancelButton = form.querySelector('button[value="cancel"]');
+cancelButton.addEventListener("click", () => {
     dialog.close();
-})
-
-submit.addEventListener("click", (event) => {
-    event.preventDefault();
-    dialog.close(); 
-  });
+});

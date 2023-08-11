@@ -89,25 +89,23 @@ body {
     width: 400px;
     padding: 20px;
     border-radius: 24px;
-    background-color: var(--dark);
     color: var(--dark);
     font-size: 20px;
     margin: auto;
 }
 
-fieldset {
-    background-color: var(--dark);
-}
-#form > fieldset > div {
-    margin-bottom: 20px;
-    background-color: var(--dark);
+#form > div {
+    margin-bottom: 10px;
+
 }
 
-#form > fieldset > div > label {
+#form > div > label {
     font-size: 15px;
     margin-bottom: 5px;
-    background-color: var(--dark);
-    color: var(--light)
+}
+
+#form > div.button {
+    align-items: center;
 }
 
 #form button {
@@ -120,11 +118,6 @@ fieldset {
     background-color: var(--dark);
     color: var(--light);
     cursor: pointer;
-}
-  
-#form button:hover {
-    background-color: var(--light);
-    color: var(--dark);
 }
 
 .box {
