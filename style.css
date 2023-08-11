@@ -39,6 +39,7 @@ body {
 .button {
     opacity: 0.5;
     transition: 0.4s;
+    cursor: pointer;
 }
 .button:hover {
     opacity: 1;
@@ -68,11 +69,10 @@ body {
 } 
 
 .add {
-    background-color: var(--dark);
+    border: 5px solid var(--dark);
     border-radius: 10px;
     width: 180px;
     height: 250px;
-    border: 5px;
     margin: 20px;
 }
 
@@ -81,22 +81,23 @@ body {
     height: 20px;
     width: 10px;
 }
+dialog {
+    height: 350px;
+    width: 400px;
+    border-radius: 24px;
+    
+}
 
 #form {
     flex-direction: column;
     align-items: left;
-    height: auto;
-    width: 400px;
     padding: 20px;
-    border-radius: 24px;
     color: var(--dark);
     font-size: 20px;
-    margin: auto;
 }
 
 #form > div {
-    margin-bottom: 10px;
-
+    margin: 13px auto;
 }
 
 #form > div > label {
@@ -117,7 +118,7 @@ body {
     border-radius: 8px;
     background-color: var(--dark);
     color: var(--light);
-    cursor: pointer;
+    
 }
 
 .box {

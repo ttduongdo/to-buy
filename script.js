@@ -30,7 +30,7 @@ function addItemToCart(item){
 function display(item){
     const box = document.createElement("div");
     mainContainer.appendChild(box);
-    box.classList.add("box", "add");
+    box.classList.add("box");
     box.innerText = item.toString();
 
 }
