@@ -2,6 +2,7 @@ html {
     box-sizing: border-box;
     --light: #FFD2D7;
     --dark: #322653;
+    --second: #ff5555;
     --title-font: 'Poppins', helvetica;
     --primary-font: 'Poppins', helvetica;
   }
@@ -9,64 +10,97 @@ html {
 *,
 *::before,
 *::after {
-box-sizing: inherit;
+    box-sizing: inherit;
 }
   
+/* General Styles */
+
 * {
     background-color: var(--light);
 
     font-family: var(--primary-font);
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
+    font-family: var(--primary-font);
     margin: 0px auto;
     max-width: 1300px;
     height: auto;
     display: block;
+    background-color: var(--light);
+    color: #333;
 }
 
+/* Header Styles */
 .header {
     margin: 0 auto;
-    padding: 20px;
+    padding: 20px 0;
 }
 
 
 .container {
-    margin: 0 30;
     display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    flex-direction: row;
 }
+
+
+.nav-link {
+    font-family: var(--title-font, serif);
+    font-weight: 400;
+    font-size: 20px;
+    text-decoration: none;
+    color: #333;
+    margin-right: 20px;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #ff5555;
+}
+
+.user {
+    margin-left: 650px;
+    
+}
+
+.signin {
+    font-family: var(--title-font);
+    font-size: 20px;
+    font-weight: 400;
+    border: none;
+    color: #333;
+    text-decoration: none;
+    margin-right: 20px;
+
+}
+/* Main Container Styles */
+
+.maincontainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+} 
 
 .button {
     opacity: 0.5;
-    transition: 0.4s;
+    transition: 0.3s;
     cursor: pointer;
 }
+
 .button:hover {
     opacity: 1;
 }
-
-.container > div {
-    font-family: var(--title-font, serif);
-    font-weight: 400;
-    font-size: 15px;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    color: var(--light);
-    text-decoration: none;
-    height: 50px;
-    min-width: 60px;
-    padding: 15px 20px;
-    white-space: nowrap;
-    margin: 0 5px;
-    border-radius: 24px;
-    background-color: var(--dark);
-}
-
-.maincontainer {
-    margin: 100px 50px;
-    display: flex;
-} 
 
 .add {
     border: 5px solid var(--dark);
@@ -74,42 +108,41 @@ body {
     width: 180px;
     height: 250px;
     margin: 20px;
+    margin-right: 30px;
 }
 
-.plusone {
-    background-color: var(--light);
-    height: 20px;
-    width: 10px;
-}
+/* Dialog Styles */
+
 dialog {
     height: 350px;
     width: 400px;
-    border-radius: 24px;
-    
+    border-radius: 24px;  
+    margin: auto;
 }
 
-#form {
+form {
     flex-direction: column;
     align-items: left;
     padding: 20px;
+    padding-left: 50px;
     color: var(--dark);
     font-size: 20px;
 }
 
-#form > div {
-    margin: 13px auto;
+form > div {
+    margin: 20px auto;
 }
 
-#form > div > label {
+form > div > label {
     font-size: 15px;
     margin-bottom: 5px;
 }
 
-#form > div.button {
+form > div.button {
     align-items: center;
 }
 
-#form button {
+form button {
     padding: 10px 20px;
     width: 130px;
     margin: 0 auto;
@@ -122,10 +155,24 @@ dialog {
 }
 
 .box {
+    background-color: var(--dark);
     color: var(--light);
     font-size: 15px;
     align-content: left;
     padding: 15px;
+    border-radius: 10px;
+    width: 180px;
+    height: 250px;
+    margin: 20px;
+    margin-right: 30px;
 
 }
 
+
+/* Footer Styles */
+.footer {
+    color: var(--dark);
+    padding: 10px 0;
+    text-align: center;
+
+}
